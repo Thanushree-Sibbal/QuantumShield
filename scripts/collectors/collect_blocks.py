@@ -20,7 +20,7 @@ latest_block = w3.eth.block_number
 
 print(f"Latest Block: {latest_block}")
 
-NUMBER_OF_BLOCKS = 100
+NUMBER_OF_BLOCKS = 1000
 
 os.makedirs("data/raw", exist_ok=True)
 
