@@ -20,3 +20,28 @@ Thumbs.db
 
 # Temporary files
 *.log
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Trained models
+models/*.pt
+models/*.pkl
+
+# Generated CSVs
+models/*.csv
+
+# Log files
+*.log
