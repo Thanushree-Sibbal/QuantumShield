@@ -1,34 +1,26 @@
 import torch
 
-from model import WalletLSTM
+from model import WalletLSTMAutoEncoder
 
-model = WalletLSTM()
+model = WalletLSTMAutoEncoder()
 
 print("=" * 60)
-print("Wallet LSTM")
+print("Wallet LSTM AutoEncoder")
 print("=" * 60)
 
 print(model)
 
-dummy = torch.randn(
-    16,
-    20,
-    4
-)
+dummy = torch.randn(16, 20, 4)
 
-output = model(dummy)
+reconstruction, embedding = model(dummy)
 
 print()
 
 print("Input Shape :", dummy.shape)
+print("Reconstruction :", reconstruction.shape)
+print("Embedding :", embedding.shape)
 
-print("Output Shape:", output.shape)
-
-params = sum(
-    p.numel()
-    for p in model.parameters()
-)
+params = sum(p.numel() for p in model.parameters())
 
 print()
-
 print("Total Parameters:", params)
