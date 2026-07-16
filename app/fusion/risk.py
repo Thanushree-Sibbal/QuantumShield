@@ -1,3 +1,4 @@
+import joblib
 import os
 import pandas as pd
 from sklearn.ensemble import IsolationForest
@@ -36,6 +37,10 @@ print()
 print("Training Isolation Forest...")
 
 model.fit(X)
+joblib.dump(
+    model,
+    "models/hybrid_isolation_forest.pkl"
+)
 
 print("Training Complete!")
 
