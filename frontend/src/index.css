@@ -1,0 +1,24 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:#0B1020;
+  color:#F3F4F6;
+}
+
+#root{
+  min-height:100vh;
+}
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#27314E;
+  border-radius:20px;
+}
